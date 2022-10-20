@@ -8,7 +8,32 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <div class="content" role="main">
-    <h1>{{ title }} fonctionne !</h1>
+    <h1>Un pokémon apparaît !</h1>
+    <div class="pokemon-card">
+        <div class="picture">
+            <img class="pokemon-background" src="../assets/SVGs/pokemon-background.svg">
+            <img class="pokemon-state" src="../assets/SVGs/pokemon-state.svg">
+            <img class="pokemon-pic" [src]="selectedPokemon.picture">
+        </div>
+        <div class="properties">
+            <h2 class="name">{{selectedPokemon.name}}</h2>
+            <span class="types">{{selectedPokemon.types}}</span>
+            <div class="row">
+                <span class="title">HP</span>
+                <span class="value">{{selectedPokemon.hp}}</span>
+            </div>
+            <div class="row">
+                <span class="title">HP</span>
+                <span class="value">{{selectedPokemon.cp}}</span>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li (click)="selectPokemon(pokemonList[0])">{{pokemonList[0].name}}</li>
+        <li (click)="selectPokemon(pokemonList[1])">{{pokemonList[1].name}}</li>
+        <li (click)="selectPokemon(pokemonList[2])">{{pokemonList[2].name}}</li>
+    </ul>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
