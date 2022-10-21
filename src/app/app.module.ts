@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BorderCardDirective,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    PokemonListComponent,
+    PokemonCardComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<div class="card" appBorderCard>
+    <div class="picture">
+        <img class="background" src="../assets/SVGs/pokemon-background.svg">
+        <img class="state" src="../assets/SVGs/pokemon-state.svg">
+        <img class="pic" [src]="pokemon.picture">
+    </div>
+    <div class="properties">
+        <h2 class="name">{{pokemon.name}}</h2>
+        <div class="types">
+            <span *ngFor="let type of pokemon.types" class="{{ type | pokemonTypeColor }}">{{ type }}</span>
+        </div>
+        <div class="card-row">
+            <span class="title">HP</span>
+            <span class="value">{{pokemon.hp}}</span>
+        </div>
+        <div class="card-row">
+            <span class="title">HP</span>
+            <span class="value">{{pokemon.cp}}</span>
+        </div>
+        <span class="date">{{pokemon.created | date:"dd/MM/YYYY" }}</span>
+    </div>
+</div>
