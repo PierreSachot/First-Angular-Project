@@ -4,7 +4,7 @@
     min-height: 100%;
 }
 
-.pokemon-card{
+.card{
     /* Auto layout */
     display: flex;
     flex-direction: column;
@@ -20,17 +20,17 @@
         min-height: 180px;
         display: block;
         margin: 0 auto;
-        .pokemon-pic{
+        .pic{
             position: absolute;
             width: 187px;
             height: 186px;
         }
-        .pokemon-state{
+        .state{
             position: absolute;
             width: 180px;
             height: 180px;
         }
-        .pokemon-background{
+        .background{
             position: absolute;
             width: 210px;
             height: 210px;
@@ -68,6 +68,7 @@
             flex-grow: 0;
             width: 100%;
             justify-content: center;
+            word-break: break-all;
         }
         .types{
             font-family: 'Montserrat';
@@ -85,10 +86,29 @@
             order: 1;
             align-self: center;
             flex-grow: 0;
-            width: 100%;
             justify-content: center;
+            word-break: break-all;
         }
-        .row{
+        .date{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+            display: flex;
+            text-align: end;
+            color: #000000;
+            /* Inside auto layout */
+            flex: none;
+            order: 3;
+            align-self: flex-end;
+            flex-grow: 0;
+            justify-content: flex-end;
+            word-break: break-all;
+            width:100%;
+        }
+        .card-row{
             /* Auto layout */
             display: flex;
             flex-direction: row;
@@ -114,6 +134,7 @@
                 flex: none;
                 order: 0;
                 flex-grow: 1;
+                word-break: break-all;
             }
             .value{
                 font-family: 'Roboto';
@@ -129,6 +150,7 @@
                 flex: none;
                 order: 1;
                 flex-grow: 0;
+                word-break: break-all;
             }
         }
     }

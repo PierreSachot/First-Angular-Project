@@ -7,17 +7,14 @@ import { Pokemon } from './pokemon';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title: string = "Liste de pokémons";
   pokemonList : Pokemon[] = POKEMONS;
-  selectedPokemon : Pokemon;
+  selectedPokemon : Pokemon|undefined;
 
-  ngOnInit() {
-    this.selectPokemon(this.pokemonList[0]);
+  selectPokemon(index : string){
+    const pokemonID: number = +index;
+    const findedPokemon: Pokemon|undefined = this.pokemonList.find(pokemon => pokemon.id === pokemonID)
+    this.selectedPokemon = findedPokemon;
   }
-
-  selectPokemon(pokemon : Pokemon){
-    this.selectedPokemon = pokemon;
-  }
-
 }
