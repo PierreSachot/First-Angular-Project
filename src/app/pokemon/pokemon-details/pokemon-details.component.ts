@@ -28,4 +28,8 @@ export class PokemonDetailsComponent implements OnInit {
   goBack(){
     this.router.navigate(['/pokemons/']);
   }
+
+  goEdit(){
+    
+  }
 }
