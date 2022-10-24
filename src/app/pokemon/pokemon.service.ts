@@ -11,7 +11,7 @@ export class PokemonService {
     return POKEMONS;
   }
 
-  getPokemon(id: number): Pokemon|undefined {
+  getPokemonById(id: number): Pokemon|undefined {
     return POKEMONS.find(pokemon => pokemon.id === id);
   }
 
