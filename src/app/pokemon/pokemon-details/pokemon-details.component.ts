@@ -21,11 +21,15 @@ export class PokemonDetailsComponent implements OnInit {
   ngOnInit(): void {
     const pokemonId: string|null = this.activatedRouter.snapshot.paramMap.get('id');
     if(pokemonId){
-      this.pokemon = this.pokemonService.getPokemon(+pokemonId);
+      this.pokemon = this.pokemonService.getPokemonById(+pokemonId);
     }
   }
 
   goBack(){
     this.router.navigate(['/pokemons/']);
+  }
+
+  goEdit(){
+    this.router.navigate([`/pokemons/${this.activatedRouter.snapshot.paramMap.get('id')}/edit`])
   }
 }
