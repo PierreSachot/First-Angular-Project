@@ -6,6 +6,8 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { PokemonService } from './pokemon.service';
+import { FormsModule } from '@angular/forms';
 
 const pokemonRoutes: Routes = [
   { path:'pokemons', component: PokemonListComponent },
@@ -21,7 +23,11 @@ const pokemonRoutes: Routes = [
     PokemonCardComponent],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(pokemonRoutes)
+  ],
+  providers: [
+    PokemonService
   ]
 })
 export class PokemonModule { }

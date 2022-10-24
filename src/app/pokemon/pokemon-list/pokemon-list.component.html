@@ -4,17 +4,4 @@
             <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
         </div>
     </div>
-    <p>Sélectionne ton pokémon :</p>
-    <input
-        #pokemonInput
-        type="number"
-        (keyup.enter)="selectPokemon(pokemonInput.value)"
-    />
-
-    <div *ngIf="!selectedPokemon">
-        <p>Aucun pokémon n'a été trouvé.</p>
-    </div>
-    <div *ngIf="selectedPokemon" class="selectedPokemon">
-        <app-pokemon-card [pokemon]="selectedPokemon"></app-pokemon-card>
-    </div>
 </div>
